@@ -14,11 +14,9 @@
     <p class="text-light">My number is {{number}}</p>
     <input type="number" class="form-control" [(ngModel)]="number">
 
-    <app-componente1 *ngIf="number%5==0" [ageNumber]=number></app-componente1> <!--Numeros multiplos de 5-->
-    <app-componente1 *ngIf="number%5==0" [ageNumber]=number></app-componente1> <!--CHALLEGE Numeros multiplos de 5-->
+    <app-componente1  *ngIf="number%5==0" [ageNumber]=number ></app-componente1> <!--Numeros multiplos de 5-->
 
     <app-componente2 *ngIf="number%9==0" [favNumber]=number></app-componente2> <!--Numeros multiplos de 9-->
-    <app-componente2 *ngIf="number%9==0" [favNumber]=number></app-componente2> <!--CHALLEGE Numeros multiplos de 9-->
 
   </div>
 

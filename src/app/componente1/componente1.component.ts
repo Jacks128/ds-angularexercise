@@ -7,11 +7,16 @@ import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChange
 })
 export class Componente1Component implements OnInit, OnChanges{
   @Input() ageNumber:Number = 22;
-
-  constructor() { }
+  test:Number=5;
+  
  
+  @Output() onTestChange:EventEmitter<Number>=new EventEmitter<Number>();
+  constructor() { }
 
   ngOnInit(): void {
+  }
+  emitEvent(){
+    this.onTestChange.emit(this.test);
   }
 
  ngOnChanges(changes: any): void {

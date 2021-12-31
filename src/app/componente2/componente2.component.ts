@@ -7,9 +7,14 @@ import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChange
 })
 export class Componente2Component implements OnInit,OnChanges {
   @Input() favNumber:Number = 19;
-
+  test:Number=5;
+  
+ 
+  @Output() onTestChange:EventEmitter<Number>=new EventEmitter<Number>();
   constructor() { }
-
+  emitEvent(){
+    this.onTestChange.emit(this.test);
+  }
   ngOnChanges(changes: any): void {
     console.log("My favorite number is "+changes.favNumber.currentValue);
    
